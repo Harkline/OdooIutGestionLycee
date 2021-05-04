@@ -9,3 +9,4 @@ class Agenda(models.Model):
     room = fields.Char(string="Room")
 
     cours_id=fields.Many2one("cours")
+    classe_id=fields.Many2one("classe")
