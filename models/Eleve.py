@@ -5,7 +5,7 @@ class Eleve(models.Model):
 
     firstname = fields.Char(string = "Firstname")
     lastname = fields.Char(string="Lastname")
-    birthdate = fields.Datetime(string="Birthdate")
+    birthdate = fields.Date(string="Birthdate")
     age = fields.Integer(compute="compute_age_student", store=True)
 
     class_id = fields.Many2one("classe")
