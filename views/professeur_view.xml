@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record id ="id_Professeur_view" model="ir.ui.view">
+            <field name = "name">resPartner.View</field>
+            <field name = "model">res.partner</field>
+            <field name = "priority">1</field>
+            <field name = "arch" type="xml">
+                <tree string = "Professeur">
+                    <field name = "class_ids"></field>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="form_action_professeur" model="ir.actions.act_window">
+            <field name = "name">Professeur</field>
+            <field name = "type">ir.actions.act_window</field>
+            <field name = "res_model">res.partner</field>
+            <field name = "view_mode">tree</field>
+        </record>
+    </data>
+</odoo>
