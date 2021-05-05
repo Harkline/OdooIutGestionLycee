@@ -13,6 +13,6 @@ class Eleve(models.Model):
 
     #A définir, calcul de l'age à partir de sa date de naissance
     @api.depends('birthdate')
-    def compute_age_student(self, birthdate):
+    def compute_age_student(self):
         todayDate = date.today()
-        return todayDate.year - birthdate.year - ((todayDate.month, todayDate.day) < (birthdate.month, birthdate.day))
+        self.age = todayDate.year - self.birthdate.year - ((todayDate.month, todayDate.day) < (self.birthdate.month, self.birthdate.day))
