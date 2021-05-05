@@ -14,7 +14,7 @@ class Classe(models.Model):
     student_nb = fields.Integer(compute="compute_counting_students", store=True) #Champ calcule
 
     agenda_id=fields.One2many("agenda", "class_id")
-    #teacher_ids = fields.Integer(related="professeur.class_ids")
+    teacher_ids = fields.Many2many("res.partner")
     eleve_id=fields.One2many("eleve", "class_id")
 
     #Fonction a définir pour calculer le nombre d'étudiants

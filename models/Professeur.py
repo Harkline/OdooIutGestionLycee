@@ -8,4 +8,4 @@ class Professeur(models.Model):
     #"professeur"
     _name = "res.partner"
 
-    #class_ids = fields.Integer(related="classe.teacher_ids")
+    class_ids = fields.Many2many("classe")
