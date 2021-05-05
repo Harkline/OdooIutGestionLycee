@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record id ="id_agenda_view" model="ir.ui.view">
+            <field name = "name">Agenda.View</field>
+            <field name = "model">agenda</field>
+            <field name = "priority">1</field>
+            <field name = "arch" type="xml">
+                <tree string = "AgendaTree">
+                    <field name = "room"></field>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="form_action_agenda" model="ir.actions.act_window">
+            <field name = "name">Agenda</field>
+            <field name = "type">ir.actions.act_window</field>
+            <field name = "res_model">agenda</field>
+            <field name = "view_mode">tree</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <!--Menus-->
+        <menuitem name="Lycee" id="LyceeMenuId" sequence="84"/>
+        <menuitem name="Agenda" id="AgendaMenuId" action="form_action_agenda" parent="LyceeMenuId" sequence="20"/>
+        <menuitem name="Configuration" id="ConfigurationMenuId" parent="LyceeMenuId" sequence="20"/>
+
+
+        <menuitem name="Cours" id="CoursMenuId" action="form_action_cours" parent="ConfigurationMenuId" sequence="20"/>
+        <menuitem name="Eleve" id="EleveMenuId" action="form_action_eleve" parent="ConfigurationMenuId" sequence="20"/>
+        <menuitem name="Professeur" id="ProfesseurMenuId" action="form_action_professeur" parent="ConfigurationMenuId" sequence="20"/>
+        <menuitem name="Classe" id="ClasseMenuId" action="form_action_classe" parent="ConfigurationMenuId" sequence="20"/>
+
+    </data>
+</odoo>

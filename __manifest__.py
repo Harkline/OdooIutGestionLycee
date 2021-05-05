@@ -24,6 +24,10 @@
     # Ajouter les vues ici (.xml)
     'data': [
         #'security/ir.model.access.csv',
+
+        "views/agenda_view.xml",
+        "views/cours_view.xml",
+        "views/arborescence_menu_view.xml"
     ],
     # only loaded in demonstration mode
     'demo': [

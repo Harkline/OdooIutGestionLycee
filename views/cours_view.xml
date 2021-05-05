@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <record id ="id_cours_view" model="ir.ui.view">
+            <field name="name">Cours.View</field>
+            <field name="model">cours</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Cours">
+                    <field name="agenda_id"></field>
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="form_action_cours" model="ir.actions.act_window">
+            <field name="name">Cours</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">cours</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
+
+
