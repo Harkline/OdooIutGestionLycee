@@ -6,6 +6,7 @@
             <field name="priority">1</field>
             <field name="arch" type="xml">
                 <tree string="Cours">
+                    <field name="name"></field>
                     <field name="agenda_id"></field>
 
                 </tree>
