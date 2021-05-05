@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_agenda,access_agenda,model_agenda,base.group_user,1,1,1,1
+access_classe,access_classe,model_classe,base.group_user,1,1,1,1
+access_cours,access_cours,model_cours,base.group_user,1,1,1,1
+access_eleve,access_eleve,model_eleve,base.group_user,1,1,1,1
