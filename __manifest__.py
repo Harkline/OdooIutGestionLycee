@@ -27,6 +27,9 @@
 
         "views/agenda_view.xml",
         "views/cours_view.xml",
+        "views/eleve_view.xml",
+
+
         "views/arborescence_menu_view.xml"
     ],
     # only loaded in demonstration mode

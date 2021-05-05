@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record id ="id_eleve_view" model="ir.ui.view">
+            <field name="name">Eleve.View</field>
+            <field name="model">eleve</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Eleve">
+                    <field name="firstname"></field>
+                    <field name="lastname"></field>
+                    <field name="birthdate"></field>
+                    <field name="age"></field>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="form_action_eleve" model="ir.actions.act_window">
+            <field name="name">Eleve</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">eleve</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
+
+
