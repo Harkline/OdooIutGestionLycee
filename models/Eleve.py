@@ -1,4 +1,5 @@
-from odoo import fields, models
+from odoo import fields, models, api
+from datetime import date
 
 class Eleve(models.Model):
     _name="eleve"
@@ -11,5 +12,7 @@ class Eleve(models.Model):
     class_id = fields.Many2one("classe")
 
     #A définir, calcul de l'age à partir de sa date de naissance
-    def compute_age_student(self):
-        pass
+    @api.depends('birthdate')
+    def compute_age_student(self, birthdate):
+        todayDate = date.today()
+        return todayDate.year - birthdate.year - ((todayDate.month, todayDate.day) < (birthdate.month, birthdate.day))
