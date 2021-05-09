@@ -6,7 +6,9 @@
             <field name = "priority">1</field>
             <field name = "arch" type="xml">
                 <tree string = "AgendaTree">
-                    <field name = "room"></field>
+                    <field name ="room"></field>
+                    <field name ="date_start"></field>
+                    <field name ="date_stop"></field>
                 </tree>
             </field>
         </record>
