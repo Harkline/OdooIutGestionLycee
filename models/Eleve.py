@@ -16,14 +16,12 @@ class Eleve(models.Model):
     def compute_age_student(self):
         #On récupère la date d'aujourd'hui
         todayDate = date.today()
-        #On vérifie que la date de naissance n'est pas vide
-        if (self.birthdate != 0):
-            #On calcule la différence en année
-            #La différence des deux dates est un "timedelta" : https://docs.python.org/3/library/datetime.html
-            #On utilise l'un des champs possibles de timedelta (Les jours) pour retrouver le nombre d'années de différence (donc l'age)
-            self.age = (todayDate - self.birthdate).days/365
-            
-
-            
-        
-        #self.age = todayDate.year - self.birthdate.year - ((todayDate.month, todayDate.day) < (self.birthdate.month, self.birthdate.day))
+        #Obligé de boucler dans self car sinon erreur "ValueError: Expected singleton" lors de la création d'une classe avec plusieurs élèves 
+        #Sinon, possible de juste utiliser self.age et self.birthdate
+        for element in self:
+            #On vérifie que la date de naissance n'est pas vide
+            if (element.birthdate != 0):
+                #On calcule la différence en année
+                #La différence des deux dates est un "timedelta" : https://docs.python.org/3/library/datetime.html
+                #On utilise l'un des champs possibles de timedelta (Les jours) pour retrouver le nombre d'années de différence (donc l'age)
+                element.age = (todayDate - element.birthdate).days/365 
