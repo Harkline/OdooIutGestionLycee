@@ -18,7 +18,7 @@
             <field name = "name">Agenda</field>
             <field name = "type">ir.actions.act_window</field>
             <field name = "res_model">agenda</field>
-            <field name = "view_mode">tree</field>
+            <field name = "view_mode">tree,form</field>
         </record>
     </data>
 </odoo>

@@ -16,7 +16,7 @@
             <field name = "name">Professeur</field>
             <field name = "type">ir.actions.act_window</field>
             <field name = "res_model">res.partner</field>
-            <field name = "view_mode">tree</field>
+            <field name = "view_mode">tree,form</field>
         </record>
     </data>
 </odoo>
