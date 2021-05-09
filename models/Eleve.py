@@ -4,10 +4,10 @@ from datetime import date
 class Eleve(models.Model):
     _name="eleve"
 
-    firstname = fields.Char(string = "Firstname")
-    lastname = fields.Char(string="Lastname")
-    birthdate = fields.Date(string="Birthdate")
-    age = fields.Integer(compute="compute_age_student", store=True) #readOnly
+    firstname = fields.Char(string = "Prénom")
+    lastname = fields.Char(string="Nom de famille")
+    birthdate = fields.Date(string="Date de naissance")
+    age = fields.Integer(compute="compute_age_student", store=True, string="Age") #readOnly
 
     class_id = fields.Many2one("classe")
 
