@@ -4,5 +4,6 @@ class Cours(models.Model):
 
     _name = "cours"
 
-    name = fields.Char(string="Matière")
+    name = fields.Char(string="Matière", required="True")
+    
     agenda_id = fields.One2many("agenda", "cours_id")

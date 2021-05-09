@@ -9,9 +9,9 @@ class Classe(models.Model):
         ("3", "Terminale")
     ]
 
-    name = fields.Char(string="Classe")
-    level = fields.Selection(selection_list, string="Niveau de classe") #champs selection
-    student_nb = fields.Integer(compute="compute_counting_students", store=True, string="Nombre d'étudiants") #Champ calcule
+    name = fields.Char(string="Classe", required="True")
+    level = fields.Selection(selection_list, string="Niveau de classe", required="True") #champs selection
+    student_nb = fields.Integer(compute="compute_counting_students", store=True, string="Nombre d'étudiants", required="True") #Champ calcule
 
     agenda_id=fields.One2many("agenda", "class_id")
     teacher_ids = fields.Many2many("res.partner")
