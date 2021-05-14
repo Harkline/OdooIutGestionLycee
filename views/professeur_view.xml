@@ -6,6 +6,7 @@
             <field name = "priority">1</field>
             <field name = "arch" type="xml">
                 <tree string = "Professeur">
+                	<field name = "name"></field>
                     <field name = "class_ids"></field>
                 </tree>
             </field>
